@@ -1,0 +1,48 @@
+@import "@fontsource-variable/arimo";
+@import "@fontsource-variable/arimo/wght-italic.css";
+@import "@fontsource-variable/open-sans/wght.css";
+@import "tailwindcss";
+
+:root {
+  font-family: "Arimo Variable", "Liberation Sans", Arial, sans-serif;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 2048px;
+  min-height: max(100vh, 1748px);
+  margin: 0;
+}
+
+body {
+  overflow: auto;
+  background: #fff;
+}
+
+#root {
+  display: grid;
+  place-items: center;
+}
+
+.og-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 2048px;
+}
+
+.og-canvas {
+  position: relative;
+  isolation: isolate;
+  flex: none;
+  width: 2048px;
+  height: 576px;
+  overflow: hidden;
+}
