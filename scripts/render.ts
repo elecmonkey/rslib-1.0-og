@@ -14,6 +14,7 @@ const renders = [
   { selector: "#rslib-og-1", outputPath: path.resolve("rslib-og-1.png") },
   { selector: "#rslib-og-2", outputPath: path.resolve("rslib-og-2.png") },
   { selector: "#rslib-og-3", outputPath: path.resolve("rslib-og-3.png") },
+  { selector: "#rslib-og-4", outputPath: path.resolve("rslib-og-4.png") },
 ] as const;
 
 const run = (command: string, args: string[]): Promise<void> =>
