@@ -32,6 +32,7 @@
   font-weight: 600;
   letter-spacing: -0.035em;
   line-height: 1;
+  transform: translateY(10px);
 }
 
 .og1-title {
@@ -68,9 +69,9 @@
 }
 
 .og1-tagline {
-  margin: 78px 0 0;
+  margin: 68px 0 0;
   color: rgba(224, 225, 233, 0.84);
-  font-size: 47px;
+  font-size: 50px;
   font-weight: 400;
   letter-spacing: 0.006em;
   line-height: 1.08;
