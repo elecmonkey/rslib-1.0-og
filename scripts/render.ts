@@ -10,12 +10,33 @@ const HEIGHT = 576;
 const HOST = "127.0.0.1";
 const PORT = 4173;
 const URL = `http://${HOST}:${PORT}/`;
-const renders = [
-  { selector: "#rslib-og-1", outputPath: path.resolve("rslib-og-1.png") },
-  { selector: "#rslib-og-2", outputPath: path.resolve("rslib-og-2.png") },
-  { selector: "#rslib-og-3", outputPath: path.resolve("rslib-og-3.png") },
-  { selector: "#rslib-og-4", outputPath: path.resolve("rslib-og-4.png") },
-] as const;
+
+const getRenders = async () => {
+  const indexSource = await readFile(path.resolve("src/index.tsx"), "utf8");
+  const ogList = indexSource.match(
+    /<div\s+className=["']og-list["']>([\s\S]*?)<\/div>/,
+  );
+
+  if (!ogList) {
+    throw new Error('Could not find <div className="og-list"> in src/index.tsx');
+  }
+
+  const ogNumbers = Array.from(
+    ogList[1].matchAll(/<Og(\d+)\s*\/>/g),
+    (match) => match[1],
+  );
+
+  if (ogNumbers.length === 0) {
+    throw new Error("No <Og<number> /> tags found inside .og-list");
+  }
+
+  return ogNumbers.map((ogNumber) => ({
+    selector: `#rslib-og-${ogNumber}`,
+    outputPath: path.resolve(`rslib-og-${ogNumber}.png`),
+  }));
+};
+
+const renders = await getRenders();
 
 const run = (command: string, args: string[]): Promise<void> =>
   new Promise((resolve, reject) => {

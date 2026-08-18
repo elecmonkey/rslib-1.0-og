@@ -1,0 +1,35 @@
+#rslib-og-10 .og1-date {
+  color: rgba(240, 241, 246, 0.9);
+  font-family: "Open Sans Variable", "Open Sans", sans-serif;
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 350;
+  letter-spacing: 0.02em;
+  transform: translateY(10px) skewX(-10deg);
+  transform-origin: left center;
+}
+
+#rslib-og-10 .og1-title {
+  transform: translateY(-5px);
+}
+
+#rslib-og-10 .og1-tagline {
+  color: rgba(240, 241, 246, 0.9);
+  font-family: "Open Sans Variable", "Open Sans", sans-serif;
+  font-weight: 350;
+  letter-spacing: 0.02em;
+  transform: translateY(-10px);
+}
+
+#rslib-og-10 .og1-portal-disc img {
+  top: 3px;
+}
+
+#rslib-og-10 .og1-portal-core {
+  z-index: 2;
+  left: 52.5%;
+}
+
+#rslib-og-10 .og1-orbit {
+  z-index: 1;
+}

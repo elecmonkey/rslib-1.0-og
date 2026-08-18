@@ -16,8 +16,8 @@ html,
 body,
 #root {
   width: 100%;
-  min-width: 2520px;
-  min-height: max(100vh, 2334px);
+  min-width: 2048px;
+  min-height: max(100vh, 1162px);
   margin: 0;
 }
 
@@ -35,23 +35,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: max-content;
-}
-
-.og-row {
-  display: grid;
-  grid-template-columns: 420px 2048px;
-  gap: 22px;
-  align-items: center;
-}
-
-.og-label {
-  color: #16121f;
-  font-size: 170px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  text-align: right;
-  white-space: nowrap;
+  width: 2048px;
 }
 
 .og-canvas {

@@ -1,0 +1,30 @@
+#rslib-og-8 .og1-date {
+  font-family: "Arimo Variable", "Liberation Sans", Arial, sans-serif;
+  font-size: 46px;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transform: translateY(10px);
+  transform-origin: left center;
+}
+
+#rslib-og-8 .og1-title {
+  transform: translateY(-5px);
+}
+
+#rslib-og-8 .og1-tagline {
+  transform: translateY(-10px);
+}
+
+#rslib-og-8 .og1-portal-disc img {
+  top: 3px;
+}
+
+#rslib-og-8 .og1-portal-core {
+  z-index: 2;
+  left: 52.5%;
+}
+
+#rslib-og-8 .og1-orbit {
+  z-index: 1;
+}
