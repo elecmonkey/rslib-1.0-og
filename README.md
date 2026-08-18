@@ -19,7 +19,7 @@ Font files are bundled locally through Fontsource packages, making the output in
 ### Arimo Variable
 
 - Package: `@fontsource-variable/arimo`
-- Used for the date, `Rslib`, and slogan
+- Used for `Rslib`
 - Weight range: `400–700`
 - Includes upright and italic styles
 - Metrically compatible with Arial
@@ -28,7 +28,7 @@ Font files are bundled locally through Fontsource packages, making the output in
 ### Open Sans Variable
 
 - Package: `@fontsource-variable/open-sans`
-- Used for `1.0`
+- Used for the date, `1.0`, and slogan
 - Weight range: `300–800`
 - Licensed under the SIL Open Font License 1.1
 
