@@ -1,16 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import { Og9 } from "./og-9/Og9";
-import { Og10 } from "./og-10/Og10";
-import { Og11 } from "./og-11/Og11";
+import { OgLatestAugust } from "./og-latest-august/OgLatestAugust";
+import { OgLatestSeptember } from "./og-latest-september/OgLatestSeptember";
+import { OgLatestSeptember1200 } from "./og-latest-september-1200/OgLatestSeptember1200";
 import "./styles.css";
 
 const App = () => (
   <div className="og-list">
-    <Og9 />
-    <Og10 />
-    <Og11 />
+    <OgLatestAugust />
+    <OgLatestSeptember />
+    <OgLatestSeptember1200 />
   </div>
 );
 

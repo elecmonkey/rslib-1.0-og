@@ -5,8 +5,8 @@ import process from "node:process";
 
 import { chromium, type Browser } from "playwright";
 
-const WIDTH = 2048;
-const HEIGHT = 576;
+const VIEWPORT_WIDTH = 2048;
+const VIEWPORT_HEIGHT = 720;
 const HOST = "127.0.0.1";
 const PORT = 4173;
 const URL = `http://${HOST}:${PORT}/`;
@@ -21,19 +21,27 @@ const getRenders = async () => {
     throw new Error('Could not find <div className="og-list"> in src/index.tsx');
   }
 
-  const ogNumbers = Array.from(
-    ogList[1].matchAll(/<Og(\d+)\s*\/>/g),
+  const ogNames = Array.from(
+    ogList[1].matchAll(/<Og(\w+)\s*\/>/g),
     (match) => match[1],
   );
 
-  if (ogNumbers.length === 0) {
-    throw new Error("No <Og<number> /> tags found inside .og-list");
+  if (ogNames.length === 0) {
+    throw new Error("No <Og… /> tags found inside .og-list");
   }
 
-  return ogNumbers.map((ogNumber) => ({
-    selector: `#rslib-og-${ogNumber}`,
-    outputPath: path.resolve(`rslib-og-${ogNumber}.png`),
-  }));
+  // `Og10` -> `10`, `OgLatestAugust` -> `latest-august`.
+  const toSlug = (ogName: string) =>
+    (ogName.match(/[A-Z][a-z]*|\d+/g) ?? [ogName]).join("-").toLowerCase();
+
+  return ogNames.map((ogName) => {
+    const slug = toSlug(ogName);
+
+    return {
+      selector: `#rslib-og-${slug}`,
+      outputPath: path.resolve(`rslib-og-${slug}.png`),
+    };
+  });
 };
 
 const renders = await getRenders();
@@ -111,7 +119,7 @@ try {
 
   browser = await chromium.launch({ headless: true });
   const page = await browser.newPage({
-    viewport: { width: WIDTH, height: HEIGHT },
+    viewport: { width: VIEWPORT_WIDTH, height: VIEWPORT_HEIGHT },
     deviceScaleFactor: 1,
   });
 
@@ -126,10 +134,20 @@ try {
       animations: "disabled",
     });
 
+    const box = await canvas.boundingBox();
+    if (!box) {
+      throw new Error(`Could not measure ${render.selector}`);
+    }
+
+    const expected = {
+      width: Math.round(box.width),
+      height: Math.round(box.height),
+    };
+
     const size = await readPngSize(render.outputPath);
-    if (size.width !== WIDTH || size.height !== HEIGHT) {
+    if (size.width !== expected.width || size.height !== expected.height) {
       throw new Error(
-        `Expected ${WIDTH}x${HEIGHT}, rendered ${size.width}x${size.height}`,
+        `Expected ${expected.width}x${expected.height}, rendered ${size.width}x${size.height}`,
       );
     }
 

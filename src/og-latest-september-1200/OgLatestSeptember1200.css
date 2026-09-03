@@ -1,0 +1,153 @@
+#rslib-og-latest-september-1200 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1200px;
+  height: 628px;
+  padding-bottom: 18px;
+  background:
+    radial-gradient(circle at 50% 33%, rgba(119, 54, 229, 0.2) 0 16%, transparent 48%),
+    radial-gradient(circle at 50% 112%, rgba(236, 66, 147, 0.18), transparent 46%),
+    linear-gradient(154deg, #02060f 0%, #061123 40%, #0a0b21 66%, #18091a 100%);
+}
+
+#rslib-og-latest-september-1200::before {
+  background:
+    radial-gradient(circle at 50% 40%, transparent 30%, rgba(2, 6, 15, 0.45) 78%),
+    repeating-linear-gradient(118deg, transparent 0 74px, rgba(255, 255, 255, 0.012) 75px 76px);
+}
+
+#rslib-og-latest-september-1200 .og1-ambient-top {
+  top: -9%;
+  right: 50%;
+  width: 620px;
+  height: 140px;
+  opacity: 0.42;
+  transform: translateX(50%) rotate(-6deg);
+}
+
+#rslib-og-latest-september-1200 .og1-ambient-bottom {
+  right: 50%;
+  bottom: -18%;
+  width: 900px;
+  height: 240px;
+  opacity: 0.22;
+  transform: translateX(50%);
+}
+
+/* Portal ------------------------------------------------------------------ */
+
+#rslib-og-latest-september-1200 .ogsq-portal {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 420px;
+  height: 300px;
+  transform: translateY(14px);
+}
+
+#rslib-og-latest-september-1200 .ogsq-haze {
+  position: absolute;
+  inset: -16% -14%;
+  border-radius: 50%;
+  background:
+    conic-gradient(from 215deg, transparent 0 12%, rgba(190, 88, 255, 0.38) 19%, rgba(254, 105, 157, 0.62) 31%, rgba(255, 159, 74, 0.8) 43%, transparent 59% 80%, rgba(126, 82, 255, 0.46) 92%, transparent),
+    radial-gradient(ellipse, rgba(159, 87, 255, 0.2), transparent 64%);
+  filter: blur(30px);
+  transform: rotate(-7deg);
+}
+
+#rslib-og-latest-september-1200 .ogsq-glow {
+  position: absolute;
+  width: 58%;
+  height: 58%;
+  border-radius: 50%;
+  background: rgba(178, 113, 255, 0.3);
+  filter: blur(45px);
+}
+
+#rslib-og-latest-september-1200 .ogsq-orbit {
+  position: absolute;
+  left: -18%;
+  width: 136%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(183, 100, 255, 0.72), rgba(255, 99, 169, 0.9), transparent);
+  box-shadow: 0 0 8px rgba(224, 93, 198, 0.75);
+}
+
+#rslib-og-latest-september-1200 .ogsq-orbit-one {
+  top: 24%;
+  transform: rotate(-16deg);
+}
+
+#rslib-og-latest-september-1200 .ogsq-orbit-two {
+  bottom: 20%;
+  transform: rotate(12deg);
+}
+
+#rslib-og-latest-september-1200 .ogsq-logo {
+  position: relative;
+  z-index: 2;
+  width: 300px;
+  height: auto;
+  filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.5));
+  transform: rotate(-2deg);
+}
+
+/* Copy -------------------------------------------------------------------- */
+
+#rslib-og-latest-september-1200 .og1-copy {
+  position: static;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: none;
+  transform: translateY(16px);
+}
+
+#rslib-og-latest-september-1200 .og1-title {
+  margin-top: 14px;
+  font-size: 116px;
+  line-height: 1;
+}
+
+#rslib-og-latest-september-1200 .og1-date {
+  margin: 30px 0 0;
+  color: rgba(240, 241, 246, 0.9);
+  font-family: "Open Sans Variable", "Open Sans", sans-serif;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 350;
+  letter-spacing: 0.02em;
+  transform: none;
+}
+
+/* Keep the sparks and trails clear of the centred mascot and wordmark. */
+
+#rslib-og-latest-september-1200 .og1-trail-a { top: 12%; left: 74%; width: 15%; }
+#rslib-og-latest-september-1200 .og1-trail-b { top: 30%; left: 6%; width: 12%; }
+#rslib-og-latest-september-1200 .og1-trail-c { bottom: 14%; left: 78%; width: 14%; }
+#rslib-og-latest-september-1200 .og1-trail-d { bottom: 26%; left: 4%; width: 10%; }
+#rslib-og-latest-september-1200 .og1-trail-e { top: 6%; left: 22%; width: 8%; opacity: 0.5; }
+
+#rslib-og-latest-september-1200 .og1-spark-field i:nth-child(1) { top: 12%; left: 8%; }
+#rslib-og-latest-september-1200 .og1-spark-field i:nth-child(2) { top: 24%; left: 20%; }
+#rslib-og-latest-september-1200 .og1-spark-field i:nth-child(3) { top: 44%; left: 12%; }
+#rslib-og-latest-september-1200 .og1-spark-field i:nth-child(4) { top: 68%; left: 7%; }
+#rslib-og-latest-september-1200 .og1-spark-field i:nth-child(5) { top: 86%; left: 17%; }
+#rslib-og-latest-september-1200 .og1-spark-field i:nth-child(6) { top: 78%; left: 27%; }
+#rslib-og-latest-september-1200 .og1-spark-field i:nth-child(7) { top: 9%; left: 33%; }
+#rslib-og-latest-september-1200 .og1-spark-field i:nth-child(8) { top: 91%; left: 40%; }
+#rslib-og-latest-september-1200 .og1-spark-field i:nth-child(9) { top: 18%; left: 62%; }
+#rslib-og-latest-september-1200 .og1-spark-field i:nth-child(10) { top: 8%; left: 88%; }
+#rslib-og-latest-september-1200 .og1-spark-field i:nth-child(11) { top: 27%; left: 93%; }
+#rslib-og-latest-september-1200 .og1-spark-field i:nth-child(12) { top: 48%; left: 89%; }
+#rslib-og-latest-september-1200 .og1-spark-field i:nth-child(13) { top: 63%; left: 96%; }
+#rslib-og-latest-september-1200 .og1-spark-field i:nth-child(14) { top: 84%; left: 84%; }
+#rslib-og-latest-september-1200 .og1-spark-field i:nth-child(15) { top: 93%; left: 63%; }
+#rslib-og-latest-september-1200 .og1-spark-field i:nth-child(16) { top: 36%; left: 3%; }
+#rslib-og-latest-september-1200 .og1-spark-field i:nth-child(17) { top: 14%; left: 47%; }
+#rslib-og-latest-september-1200 .og1-spark-field i:nth-child(18) { top: 71%; left: 76%; }
